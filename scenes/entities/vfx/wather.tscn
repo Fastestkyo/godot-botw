@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctx0vqd2fw86r"]
+
+[ext_resource type="Shader" uid="uid://y57r0c8xe0pq" path="res://scenes/entities/vfx/wather.tres" id="1_5ixxw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_odcau"]
+render_priority = 0
+shader = ExtResource("1_5ixxw")
+shader_parameter/WaveHeight = 4.0
+shader_parameter/Vector2Parameter = Vector2(1, -0.15)
+shader_parameter/Color = Color(1e-06, 0.388383, 0.38856, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xbr5j"]
+material = SubResource("ShaderMaterial_odcau")
+size = Vector2(500, 500)
+subdivide_width = 200
+subdivide_depth = 200
+
+[node name="wather" type="MeshInstance3D"]
+mesh = SubResource("PlaneMesh_xbr5j")

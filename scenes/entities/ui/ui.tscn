@@ -1,0 +1,115 @@
+[gd_scene load_steps=5 format=3 uid="uid://bitcibkdrji1n"]
+
+[ext_resource type="Script" path="res://scenes/entities/ui/ui.gd" id="1_eytbb"]
+[ext_resource type="Texture2D" uid="uid://3vh0pug1ilge" path="res://graphics/ui/fire.png" id="2_ibqbp"]
+[ext_resource type="Texture2D" uid="uid://gi44t0kmhjr8" path="res://graphics/ui/bar_color.png" id="3_diq4c"]
+[ext_resource type="Texture2D" uid="uid://ca408dm1c5imy" path="res://graphics/ui/circle.png" id="4_4vsvx"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eytbb")
+
+[node name="Hearts" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Hearts"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(2, 2)
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Hearts/MarginContainer"]
+layout_mode = 2
+
+[node name="Spells" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Spells"]
+layout_mode = 0
+offset_top = -31.0
+offset_right = 40.0
+offset_bottom = 9.0
+
+[node name="TextureRect" type="TextureRect" parent="Spells/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("2_ibqbp")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="EnergyBar" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 849.0
+offset_top = 885.0
+offset_right = 889.0
+offset_bottom = 925.0
+
+[node name="MarginContainer" type="MarginContainer" parent="EnergyBar"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 43.0
+offset_top = 61.0
+offset_right = 143.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="EnergyBar/MarginContainer"]
+layout_mode = 2
+value = 100.0
+texture_under = ExtResource("3_diq4c")
+texture_progress = ExtResource("3_diq4c")
+tint_under = Color(0.14902, 0.14902, 0.14902, 1)
+tint_progress = Color(0.219608, 0.435294, 1, 1)
+
+[node name="StaminaBar" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="StaminaBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="StaminaBar/CenterContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 320
+theme_override_constants/margin_bottom = 300
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="StaminaBar/CenterContainer/MarginContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+value = 100.0
+fill_mode = 4
+texture_under = ExtResource("4_4vsvx")
+texture_progress = ExtResource("4_4vsvx")
+tint_under = Color(0.14902, 0.14902, 0.14902, 1)
+tint_progress = Color(0.556885, 0.999999, 0.996068, 1)

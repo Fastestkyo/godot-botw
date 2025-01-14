@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfe161suyfwpf"]
+
+[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_iy7jh"]
+[ext_resource type="PackedScene" uid="uid://byqjx6g218fav" path="res://scenes/entities/player/player.tscn" id="1_xbrmr"]
+[ext_resource type="AudioStream" uid="uid://cm8ncbpf8wgf0" path="res://audio/music.ogg" id="3_x78te"]
+
+[node name="Level" type="Node3D"]
+script = ExtResource("1_iy7jh")
+
+[node name="Entities" type="Node3D" parent="."]
+
+[node name="Player" parent="Entities" instance=ExtResource("1_xbrmr")]
+
+[node name="Environment" type="Node3D" parent="."]
+
+[node name="Projectiles" type="Node3D" parent="."]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_x78te")
+volume_db = 80.0
+unit_size = 30.7
+max_db = 6.0
+autoplay = true

@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://c4fr2rcu7obel"]
+
+[ext_resource type="Shader" path="res://scenes/entities/player/godette_skin-ovrlay.gdshader" id="1_rp2dx"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_rp2dx")
+shader_parameter/color = Color(0, 0.97857, 0, 1)
+shader_parameter/energy = 1.0
+shader_parameter/alpha = 0.0

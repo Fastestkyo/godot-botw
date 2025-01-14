@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://byqprvlsrq3cg"]
+
+[ext_resource type="PackedScene" uid="uid://bgll6w8q3w2kf" path="res://graphics/environment/import_demo.blend" id="1_81jrn"]
+
+[node name="import_demo" instance=ExtResource("1_81jrn")]

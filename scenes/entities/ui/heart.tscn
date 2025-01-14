@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://dw2r85psbtnn"]
+
+[ext_resource type="Texture2D" uid="uid://c1bbbjkvgcdml" path="res://graphics/ui/heart.png" id="1_hjq6f"]
+[ext_resource type="Shader" path="res://scenes/entities/ui/heart.gdshader" id="1_v05hh"]
+[ext_resource type="Script" path="res://scenes/entities/ui/heart.gd" id="3_4780t"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qyh21"]
+resource_local_to_scene = true
+shader = ExtResource("1_v05hh")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+shader_parameter/alpha = 1.0
+
+[node name="heart" type="TextureRect"]
+material = SubResource("ShaderMaterial_qyh21")
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_hjq6f")
+expand_mode = 2
+stretch_mode = 4
+script = ExtResource("3_4780t")
