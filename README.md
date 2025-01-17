@@ -14,3 +14,4 @@
 
 
 (if ur from high seas, i cnat record the game cuz my pc too potato)
+dis the game-https://fastestkyo2-real.itch.io/rpg
